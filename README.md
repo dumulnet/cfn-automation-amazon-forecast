@@ -1,5 +1,10 @@
 # cfn-automation-amazon-forecast
 Automate the deployment of an Amazon Forecast time-series forecasting model
-
+## 설치
+- 번호 순서대로 stack 생성
+- 'dada/forecast'에 파일을 위에서 생성한 s3 버킷 > 스택 이름 폴더에 업로드
+'''
+"Path.$": "States.Format('{}{}{}','s3://',$.GetParameters.DatasetS3Bucket,'/{stack-name-02}/tts/')",
+'''
 ## Reference
 - https://aws.amazon.com/ko/blogs/machine-learning/automate-the-deployment-of-an-amazon-forecast-time-series-forecasting-model/
