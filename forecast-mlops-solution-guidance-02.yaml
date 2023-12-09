@@ -59,22 +59,26 @@ Parameters:
     Description: Provide a valid JSON string to define the Target Time Series Schema
     Type: String
     Default: 
-        '{
-            "Attributes": [
-            {
-              "AttributeName": "item_id",
-              "AttributeType": "string"
-            },
-            {
-              "AttributeName": "food_category",
-              "AttributeType": "string"
-            },
-            {
-              "AttributeName": "food_cuisine",
-              "AttributeType": "string"
-            }
-            ]
-        }'
+          '{
+              "Attributes": [
+              {
+                "AttributeName": "location_id",
+                "AttributeType": "string"
+              },
+              {
+                "AttributeName": "item_id",
+                "AttributeType": "string"
+              },
+              {
+                "AttributeName": "target_value",
+                "AttributeType": "integer"
+              },
+              {
+                "AttributeName": "timestamp",
+                "AttributeType": "timestamp"
+              }
+              ]
+          }'
 
   SchemaRTS:
       Description: Provide a valid JSON string to define the Related Time Series Schema
@@ -118,26 +122,22 @@ Parameters:
         Description: Provide a valid JSON string to define the Item Metadata Schema
         Type: String
         Default: 
-          '{
-              "Attributes": [
-              {
-                "AttributeName": "location_id",
-                "AttributeType": "string"
-              },
-              {
-                "AttributeName": "item_id",
-                "AttributeType": "string"
-              },
-              {
-                "AttributeName": "target_value",
-                "AttributeType": "integer"
-              },
-              {
-                "AttributeName": "timestamp",
-                "AttributeType": "timestamp"
-              }
-              ]
-          }'
+            '{
+                "Attributes": [
+                {
+                  "AttributeName": "item_id",
+                  "AttributeType": "string"
+                },
+                {
+                  "AttributeName": "food_category",
+                  "AttributeType": "string"
+                },
+                {
+                  "AttributeName": "food_cuisine",
+                  "AttributeType": "string"
+                }
+                ]
+            }'
 
   PredictorForecastFrequency:
     Description: What period are forecasts generated at
