@@ -2,7 +2,7 @@
 Automate the deployment of an Amazon Forecast time-series forecasting model
 ## 설치
 - 번호 순서대로 stack 생성
-- 'dada/forecast'에 파일을 위에서 생성한 s3 버킷 > 스택 이름 폴더에 업로드
+- 생성한 s3 버킷에 스택 이름으로 폴더를 만들고 'dada/forecast'에 파일 압축을 풀어서 업로드
 ```
 "Path.$": "States.Format('{}{}{}','s3://',$.GetParameters.DatasetS3Bucket,'/{stack-name-02}/tts/')",
 ```
