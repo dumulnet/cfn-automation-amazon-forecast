@@ -7,5 +7,12 @@ Automate the deployment of an Amazon Forecast time-series forecasting model
 "Path.$": "States.Format('{}{}{}','s3://',$.GetParameters.DatasetS3Bucket,'/{stack-name-02}/tts/')",
 ```
 - Step Functions 콘솔에서 `Create-Dataset-Group` 실행
+- Step Functions 콘솔에서 `Import-Dataset` 실행
+- Step Functions 콘솔에서 `Create-Predictor` 실행
+- Parameter Store 콘솔 이동
+  - `/forecast/<StackName>/Forecast/PredictorArn` 값을 위에서 생성된 예측기의 ARN 입력
+  - `/forecast/<StackName>/Forecast/Generate`의 `FALSE` -> `TRUE` 로 변경
+- Step Functions 콘솔에서 `Create-Forecast` 실행
+
 ## Reference
 - https://aws.amazon.com/ko/blogs/machine-learning/automate-the-deployment-of-an-amazon-forecast-time-series-forecasting-model/
